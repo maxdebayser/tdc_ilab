@@ -123,9 +123,6 @@ ilab data generate --pipeline simple --taxonomy-path taxonomy/   5.09s user 2.08
 #
 $ ilab model train --model-path instructlab/merlinite-7b-lab --input-dir "${HOME}/Library/Application Support/instructlab/datasets"
 
-# Treinamento com modelo quantizado (já baixado no início)
-ilab model train --gguf-model-path "${HOME}/Library/Caches/instructlab/models/merlinite-7b-lab-Q4_K_M.gguf" --tokenizer-dir instructlab/merlinite-7b-lab --model-path instructlab/merlinite-7b-lab  --input-dir "${HOME}/Library/Application Support/instructlab/datasets"
-
 $ ilab model convert --model-dir  "${HOME}/Library/Application\ Support/instructlab/checkpoints/instructlab-merlinite-7b-lab-mlx-q"
 $ ilab model serve --model-path instructlab-merlinite-7b-lab-trained/instructlab-merlinite-7b-lab-Q4_K_M.gguf
 $ ilab model chat -gm -qq "Como fazer crepioca?"
