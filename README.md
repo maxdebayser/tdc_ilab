@@ -122,9 +122,9 @@ ilab data generate --pipeline simple --taxonomy-path taxonomy/   5.09s user 2.08
 # Treinamento - Aqui tem que mater o ilab model serve no outro terminal
 #
 $ ilab model train --model-path instructlab/merlinite-7b-lab --input-dir "${HOME}/Library/Application Support/instructlab/datasets"
+$ ilab model convert --model-dir  "${HOME}/Library/Application Support/instructlab/checkpoints/instructlab-merlinite-7b-lab-mlx-q" --model-name crepioca
 
-$ ilab model convert --model-dir  "${HOME}/Library/Application\ Support/instructlab/checkpoints/instructlab-merlinite-7b-lab-mlx-q"
-$ ilab model serve --model-path instructlab-merlinite-7b-lab-trained/instructlab-merlinite-7b-lab-Q4_K_M.gguf
+$ ilab model serve --model-path crepioca-trained/crepioca-Q4_K_M.gguf
 $ ilab model chat -gm -qq "Como fazer crepioca?"
 The response would be: 'To make crepioca, you need one tablespoon of tapioca flour mixed with two tablespoons of water and one egg.
 ```
